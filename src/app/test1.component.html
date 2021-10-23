@@ -1,0 +1,21 @@
+<div class="row" >
+  <div class="col-md-3" style="text-align: center;" *ngFor="let person of psersons">
+    <img style="width: 100%;border-radius: 10px; "
+      src={{person.pic}}
+      alt="">
+    <mat-card class="col" style="width: 95%;text-align: center;margin: auto;box-shadow: 5px 5px 10px 10px gray ;">
+      <h3>الاسم : {{person.name!}}</h3>
+      <h3 *ngIf="person.father!=null" >اسم الأب : {{person.father.name}}</h3>
+      <h3 *ngIf="person.mother!=null">اسسم الأم : {{person.mother.name}}</h3>
+      <h3>عنوان السكن : {{person.location}}</h3>
+      <h3>تاريخ الميلاد : {{person.birthDate}}</h3>
+      <h3 *ngIf="person.deathDate!=null">تاريخ الوفاة : {{person.deathDate}}</h3>
+      <h3>العمل : {{person.job}}</h3>
+      <h3>الهاتف : {{person.phone}}</h3>
+      <h3>مكان الولادة : {{person.birthCity}}</h3>
+      <h3>مكان الإقامة : {{person.currentCity}}</h3>
+      <hr>
+      <h3 style="color: gray;">إضغط للمزيد من التفاصيل</h3>
+    </mat-card>
+  </div>
+</div>

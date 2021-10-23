@@ -1,0 +1,32 @@
+<mat-card style="background-color: rgba(209, 230, 237, 1); border-radius: 20px;margin: auto;">
+  <mat-card-content class="col-md m-a" style="text-align: center;align-items: center;">
+    <br>
+    <h1 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">{{person!.name}}</h1>
+    <hr style="position: relative;">
+    <div class="row m-a" style="position: relative;align-items: center;">
+      <div class="col-md m-a">
+        <img style="width: 100%; height: 100%;" src={{person!.pic}} alt="">
+      </div>
+
+      <div class="col-md m-a" style="text-align: center;">
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">الاسم : {{person!.name}}</h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" *ngIf="person!.father!=null">اسم الأب :
+          {{person!.father.name}}</h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" *ngIf="person!.mother!=null">اسم الأم :
+          {{person!.mother.name}}</h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">العنوان : {{person!.location}}</h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">تاريخ الميلاد : {{person!.birthDate}}
+        </h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" *ngIf="person!.deathDate!=null">تاريخ
+          الوفاة : {{person!.deathDate}}</h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">العمل : {{person!.job}}</h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">الهاتف : {{person!.phone}}</h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">مكان الولادة : {{person!.birthCity}}
+        </h3>
+        <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">مكان الإقامة : {{person!.currentCity}}
+        </h3>
+      </div>
+    </div>
+    <br>
+  </mat-card-content>
+</mat-card>
